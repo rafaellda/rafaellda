@@ -1,0 +1,148 @@
+<meta charset="utf-8">
+
+	<title>Análise DuPont</title>
+
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+</style>
+<link rel="stylesheet" href="untitled2.css">
+
+
+
+<h1>Análise DuPont</h1>
+<br>
+
+<h2>
+Lucro Líquido: <input type="number" id= "ll"/>
+Patrimônio Líquido: <input type="number" id= "pl"/>
+Total de ativos: <input type="number" id= "ta"/> 
+Receita: <input type="number" id= "r"/> 
+<br><br> 
+<button onclick="MQ()">MQ</button> 
+<button onclick="Giro()">Giro</button> 
+<button onclick="ROA()">ROA</button>
+<button onclick="AF()">Alavancagem Financeira</button> 
+<button onclick="ROE()">ROE</button>
+</h2>
+
+<script>
+
+   var radios = document.getElementsByName("industria");
+   
+
+	   function ROE() {
+
+            var x = document.getElementById("ll").value;
+            var y = document.getElementById("pl").value;       
+  			var roe = (x/y)*100;
+
+          				alert("O ROE é " + roe + "%");
+         }
+
+    	function ROA() { 
+
+
+            var x = document.getElementById("ll").value;
+            var w = document.getElementById("ta").value; 
+    		var roa = (x/w)*100;
+
+    					alert("O ROA é " + roa + "%");	
+
+    	}
+
+
+    	function MQ() { 
+
+            var x = document.getElementById("ll").value;
+            var z = document.getElementById("r").value;
+    		var mq = (x/z)*100;
+
+    					alert("A margem líquida é " + mq + "% " + i);	
+
+    	}
+
+
+        function Giro() {
+
+            var z = document.getElementById("r").value;
+            var w = document.getElementById("ta").value;   
+            var giro = (z/w);
+
+                        alert("O giro é " + giro);
+        }
+
+        function AF() {
+
+            var w = document.getElementById("ta").value; 
+            var y = document.getElementById("pl").value;   
+            var af = (w/y);
+
+                        alert("A alavancagem Financeira é " + af);
+        }
+
+
+          function escolha() {
+
+
+                 if (radios[1].checked) 
+
+                 {
+                
+                  document.getElementById("demo").innerHTML = "Margem líquida = 10% <br> Giro = 1,0 <br> ROA = 10% <br> Alavancagem Financeira = 2,5 <br> ROE = 23%"
+                 
+                    
+                 }
+
+
+                 if (radios[2].checked) 
+
+                 {
+            
+                  document.getElementById("demo").innerHTML = "Margem líquida = 16% <br> Giro = 0,01 <br> ROA = 1,6% <br> Alavancagem Financeira = 9,7 <br> ROE = 16%";                 
+
+                 }
+
+
+                 if (radios[3].checked) 
+
+                 {
+                
+                  document.getElementById("demo").innerHTML = "Margem líquida = 14% <br> Giro = 0,9 <br> ROA = 13% <br> Alavancagem Financeira = 1,4 <br> ROE = 18%";                  
+
+                 }
+
+        }
+
+      window.onload = function insertImage() {
+
+                      document.getElementById("fotos").src = "renner_image.png";
+                      document.getElementById("fotos1").src = "itau_image.png";
+                      document.getElementById("fotos2").src = "crista_image.png";
+
+                          }      
+                  
+             
+          
+
+</script>
+
+
+<br><br>
+<h3>Escolha uma empresa para comparar os indicadores </h3>
+<p>
+  <form action="#n" name="industria">
+  <label for="industria">Empresas: </label><br>
+  <input type="radio" name="industria" value="c"> Renner<br>
+  <input type="radio" name="industria" value="b"> Itau Unibanco<br>
+  <input type="radio" name="industria" value="o"> Cristal Pigmentos<br>  
+  <button onclick="escolha()" >Submit</button> 
+</form>
+<br>
+</p>
+
+<p id="demo"id></p><br>
+<h4>*Dados baseados nos balanços patrimonias de 2017 das empresas:<a href="http://lojasrenner.mzweb.com.br/default_pt.asp?idioma=0&conta=28"> Renner</a>, <a href="http://www.econoinfo.com.br/financas-e-mercados/demonstracoes?codigoCVM=19348#">Itau</a> e  <a href="https://www.cristal-al.com.br">Cristal Pigmentos</a><br><br></h4>
+<img  class="razer" id="fotos" onload="insertImage()" height="100px" width="150px">
+<img  class="razer" id="fotos2" onload="insertImage()" height="100px" width="220px">
+<img  class="razer" id="fotos1" onload="insertImage()" height="105px" width="160px">

@@ -1,0 +1,49 @@
+
+body {
+    font-family: "Slabo 27px", serif;
+    background-color: #ffffff;
+}
+
+
+h1 {
+
+    font-family: "Slabo 27px", serif;
+    text-align: center;
+    background-color: #ff0000;
+    color: #000000;
+}
+
+h2 {
+
+     font-family: "Slabo 27px", serif;
+     text-align: center;
+
+}
+
+h3 {
+
+    text-align: center;
+    font-family: 'Slabo 27px', serif;
+}
+
+h4 {
+
+    text-align: left;
+    font-size: 15px;
+    font-family: "Times New Roman", serif;
+
+}
+
+
+p {
+    text-align: left;
+    font-size: 20px;
+}
+
+blockquote {
+
+	background-color: #ffffff;
+	color: #ff0000;
+	font-size: 17px;
+
+	}
